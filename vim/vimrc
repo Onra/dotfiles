@@ -6,6 +6,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+
+" Plug 'phanviet/vim-monokai-pro'
 Plug 'tomasiser/vim-code-dark'
 
 Plug 'mattn/emmet-vim'
@@ -32,10 +36,9 @@ Plug 'prettier/vim-prettier', {
     \ 'swift' ] }
 call plug#end()
 
+colorscheme codedark 
+
 " TABS & SPACES
-set t_Co=256
-set t_ut=
-colorscheme codedark 	" VSCode colorscheme
 syntax enable	" Enable syntax highlighting
 set tabstop=2	" number of visual spaces per TAB
 set softtabstop=2 " number of spaces in tab when editing
@@ -43,6 +46,7 @@ set expandtab 	" tabs are spaces
 
 " UI CONFIG
 set number 	" Enable line numbers
+set relativenumber " Display relative line numbers (line numbers from current line)
 set showcmd		" show last command in bottom bar
 set cursorline    " highlight current line
 filetype indent on    " load filetype-specific indent file
