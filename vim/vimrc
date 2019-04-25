@@ -6,6 +6,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+Plug 'tomasiser/vim-code-dark'
+
 Plug 'mattn/emmet-vim'
 Plug 'w0rp/ale'
 Plug 'skywind3000/asyncrun.vim'
@@ -31,6 +33,8 @@ Plug 'prettier/vim-prettier', {
 call plug#end()
 
 " TABS & SPACES
+set t_Co=256
+set t_ut=
 colorscheme codedark 	" VSCode colorscheme
 syntax enable	" Enable syntax highlighting
 set tabstop=2	" number of visual spaces per TAB
