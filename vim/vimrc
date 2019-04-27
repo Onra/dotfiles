@@ -8,8 +8,8 @@ Plug 'mxw/vim-jsx'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
 
-" Plug 'phanviet/vim-monokai-pro'
 Plug 'tomasiser/vim-code-dark'
 
 Plug 'mattn/emmet-vim'
