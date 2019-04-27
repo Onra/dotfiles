@@ -42,6 +42,7 @@ colorscheme codedark
 syntax enable	" Enable syntax highlighting
 set tabstop=2	" number of visual spaces per TAB
 set softtabstop=2 " number of spaces in tab when editing
+set shiftwidth=2
 set expandtab 	" tabs are spaces
 
 " UI CONFIG
@@ -88,4 +89,5 @@ let g:user_emmet_settings = {
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 let g:prettier#exec_cmd_async = 1
-
+let g:prettier#config#tab_width = 2
+let g:prettier#config#print_width = 80
