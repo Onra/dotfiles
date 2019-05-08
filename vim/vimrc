@@ -12,12 +12,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
-Plug 'airblade/vim-gitgutter'
+Plug 'agarrharr/consolation-vim'
+Plug 'vim-airline/vim-airline'
 
 Plug 'tomasiser/vim-code-dark'
 
 Plug 'mattn/emmet-vim'
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
@@ -76,6 +77,9 @@ nnoremap j gj
 nnoremap k gk
 " highlight last inserted text
 nnoremap gV `[v`]   
+" Navigate to previous and next buffer
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
 
 " LEADER SHORTCUTS
 " jk is escape
@@ -110,3 +114,6 @@ map <C-n> :NERDTreeToggle<CR>
 let g:ctrlp_map='<c-p>'
 let g:ctrlp_cmd='CtrlP'
 let g:ctrlp_show_hidden=1
+
+" consation-vim config
+nnoremap <leader>c :Consolate<cr>
