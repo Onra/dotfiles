@@ -70,7 +70,7 @@ set wildignore+=**/node_modules/**
 
 "ack config
 nnoremap <Leader>a :Ack!<Space>
-let g:ackprg = '~/tools/ack.pl -s -H --nogroup --column'
+let g:ackprg = 'ack -s -H --nogroup --column'
 
 " FOLDING
 set foldenable    " enable folding
