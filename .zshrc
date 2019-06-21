@@ -89,6 +89,8 @@ prompt pure
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+alias godev="cd ~/dev/"
+
 export DEFAULT_USER="$(whoami)"
 
 # tabtab source for serverless package
