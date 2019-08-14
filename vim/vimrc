@@ -19,6 +19,7 @@ Plug 'mileszs/ack.vim'
 
 Plug 'tomasiser/vim-code-dark'
 
+Plug 'ternjs/tern_for_vim', {'do': 'npm i'}
 Plug 'mattn/emmet-vim'
 " Plug 'w0rp/ale'
 Plug 'skywind3000/asyncrun.vim'
@@ -44,6 +45,10 @@ Plug 'prettier/vim-prettier', {
 call plug#end()
 
 colorscheme codedark 
+
+" AUTOCOMPLETE
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 " TABS & SPACES
 syntax enable	" Enable syntax highlighting
