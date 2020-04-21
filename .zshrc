@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/arnaudchrist/.oh-my-zsh
+export ZSH=/Users/onra/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -52,7 +52,7 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+# plugins=(colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,15 +90,10 @@ prompt pure
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias godev="cd ~/dev/"
+alias ll="ls -lsa"
+alias tmux="TERM=xterm-256color tmux"
 
 export DEFAULT_USER="$(whoami)"
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/arnaudchrist/.npm/_npx/25353/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/arnaudchrist/.npm/_npx/25353/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/arnaudchrist/.npm/_npx/25353/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/arnaudchrist/.npm/_npx/25353/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/arnaudchrist/.npm/_npx/25353/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/arnaudchrist/.npm/_npx/25353/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
+# Activate zsh-syntax-highlighting
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

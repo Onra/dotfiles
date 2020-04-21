@@ -1,0 +1,96 @@
+syntax on
+
+set hidden
+set noerrorbells
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set number
+set relativenumber
+set lazyredraw
+set showmatch
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set hlsearch
+set showmatch
+" set path+=**
+" set wildignore+=**/node_modules/**
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+" Having longer updatetime (default is 4000 ms) leads to noticeable
+" delays and poor user experience.
+set updatetime=50
+
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'morhetz/gruvbox'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'jremmen/vim-ripgrep'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'mbbill/undotree'
+Plug 'preservim/nerdtree'
+Plug 'ycm-core/YouCompleteMe'
+
+call plug#end()
+
+
+colorscheme gruvbox
+set background=dark
+
+let mapleader = " "
+
+let g:ctrlp_use_caching = 0
+
+
+if executable('rg')
+  let g:rg_derive_root='true'
+endif
+
+" jk is escape
+inoremap jk <esc>
+
+nnoremap <Leader>ps :Rg<SPACE>
+nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <silent> <Leader>+ :vertical resize +5<CR>
+nnoremap <silent> <Leader>- :vertical resize -5<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>n :NERDTreeFind<CR>
+
+
+" --------------------------------------------------
+" --------------       NERDTree       --------------
+" --------------------------------------------------
+
+" Open a NERDTree automatically when vim starts up if no files were specified?
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+map <C-n> :NERDTreeToggle<CR>
+
+
+" --------------------------------------------------
+" --------------       CtrlP.vim      --------------
+" --------------------------------------------------
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
