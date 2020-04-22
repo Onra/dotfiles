@@ -35,6 +35,9 @@ set shortmess+=c
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+" Fix for backspace which was not working as expected.
+set backspace=indent,eol,start
+
 
 call plug#begin('~/.vim/plugged')
 
@@ -48,7 +51,27 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
-Plug 'ycm-core/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'skywind3000/asyncrun.vim'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
 
 call plug#end()
 
@@ -66,7 +89,7 @@ if executable('rg')
 endif
 
 " jk is escape
-inoremap jk <esc>
+inoremap jk <Esc>
 
 nnoremap <Leader>ps :Rg<SPACE>
 nnoremap <leader>u :UndotreeToggle<CR>
@@ -89,8 +112,20 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 map <C-n> :NERDTreeToggle<CR>
 
+" Close vim if the only window left open is a NERDTree.
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 " --------------------------------------------------
 " --------------       CtrlP.vim      --------------
 " --------------------------------------------------
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" --------------------------------------------------
+" --------------       Prettier       --------------
+" --------------------------------------------------
+let g:prettier#autoformat = 0
+autocmd BufWritePre,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+let g:prettier#exec_cmd_async = 1
+let g:prettier#config#tab_width = 2
+let g:prettier#config#print_width = 80
