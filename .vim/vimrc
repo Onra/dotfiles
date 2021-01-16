@@ -54,6 +54,7 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'skywind3000/asyncrun.vim'
+Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'branch': 'release/1.x',
@@ -130,3 +131,5 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 let g:prettier#exec_cmd_async = 1
 let g:prettier#config#tab_width = 2
 let g:prettier#config#print_width = 80
+
+let vim_markdown_preview_hotkey='<C-m>'
