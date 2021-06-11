@@ -44,6 +44,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte'
+Plug 'codechips/coc-svelte', {'do': 'npm install'}
 Plug 'mxw/vim-jsx'
 Plug 'jremmen/vim-ripgrep'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -68,6 +70,7 @@ Plug 'prettier/vim-prettier', {
     \ 'graphql',
     \ 'markdown',
     \ 'vue',
+    \ 'svelte',
     \ 'lua',
     \ 'php',
     \ 'python',
