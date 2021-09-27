@@ -1,0 +1,9 @@
+[user]
+	email = arnaud.christ@gmail.com
+	name = Arnaud Christ
+[alias]
+	lg = log --color --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ll = log --color --graph --pretty=format:'%C(red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+	ss = status
+[core]
+	autocrlf = input
