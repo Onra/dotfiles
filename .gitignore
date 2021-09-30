@@ -1,0 +1,4 @@
+vim/plugged/*
+*.old
+*.swp
+.DS_Store
