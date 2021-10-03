@@ -40,6 +40,9 @@ Plug 'nvim-telescope/telescope.nvim'
 " nerdtree
 Plug 'preservim/nerdtree'
 
+" LSP
+Plug 'neovim/nvim-lspconfig'
+
 call plug#end()
 
 
@@ -56,3 +59,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Display hidden files by default in NERDTree
 let g:NERDTreeShowHidden=1
 
+" LSP configuration for Python
+lua << EOF
+require'lspconfig'.pyright.setup{}
+EOF
