@@ -28,7 +28,7 @@ nnoremap <leader>l :wincmd l<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'gruvbox-community/gruvbox'
+Plug 'morhetz/gruvbox'
 
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
@@ -43,8 +43,35 @@ Plug 'preservim/nerdtree'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
+Plug 'prettier/vim-prettier', {
+  \ 'tag': '0.2.7',
+  \ 'do': 'npm install',
+  \ 'branch': 'release/1.x',
+  \ 'for': [
+    \ 'javascript',
+    \ 'typescript',
+    \ 'css',
+    \ 'less',
+    \ 'scss',
+    \ 'json',
+    \ 'graphql',
+    \ 'markdown',
+    \ 'vue',
+    \ 'lua',
+    \ 'php',
+    \ 'python',
+    \ 'ruby',
+    \ 'html',
+    \ 'swift' ] }
+
+" Status line
+Plug 'hoob3rt/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 call plug#end()
 
+"Styling
+colorscheme gruvbox
 
 " NERDTree
 " Open nerdtree automatically when vim starts up if no files were specified`
@@ -62,4 +89,24 @@ let g:NERDTreeShowHidden=1
 " LSP configuration for Python
 lua << EOF
 require'lspconfig'.pyright.setup{}
+require('lualine').setup()
 EOF
+
+" Prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+
+" Give more space for displaying messages.
+set cmdheight=2
+
+set colorcolumn=120
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+" Fix for backspace which was not working as expected.
+set backspace=indent,eol,start
+
+set tabstop=2 softtabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set number
