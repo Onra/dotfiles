@@ -28,6 +28,8 @@ nnoremap <leader>l :wincmd l<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sensible'
 Plug 'morhetz/gruvbox'
 
 " treesitter
