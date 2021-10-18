@@ -28,7 +28,6 @@ nnoremap <leader>l :wincmd l<CR>
 call plug#begin('~/.vim/plugged')
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
 Plug 'morhetz/gruvbox'
 
@@ -45,30 +44,18 @@ Plug 'preservim/nerdtree'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'prettier/vim-prettier', {
-  \ 'tag': '0.2.7',
-  \ 'do': 'npm install',
-  \ 'branch': 'release/1.x',
-  \ 'for': [
-    \ 'javascript',
-    \ 'typescript',
-    \ 'css',
-    \ 'less',
-    \ 'scss',
-    \ 'json',
-    \ 'graphql',
-    \ 'markdown',
-    \ 'vue',
-    \ 'lua',
-    \ 'php',
-    \ 'python',
-    \ 'ruby',
-    \ 'html',
-    \ 'swift' ] }
+Plug 'sbdchd/neoformat'
 
 " Status line
 Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'pangloss/vim-javascript'
+Plug 'tomlion/vim-solidity'
 
 call plug#end()
 
@@ -94,9 +81,8 @@ require'lspconfig'.pyright.setup{}
 require('lualine').setup()
 EOF
 
-" Prettier
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+" Format on save
+autocmd BufWritePre *.js Neoformat
 
 " Give more space for displaying messages.
 set cmdheight=2
