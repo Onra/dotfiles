@@ -1,8 +1,5 @@
 set relativenumber
 
-" Vertical bar indicator for line size
-set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 let mapleader = " "
 
@@ -78,6 +75,7 @@ let g:NERDTreeShowHidden=1
 " LSP configuration for Python
 lua << EOF
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.tsserver.setup{}
 require('lualine').setup()
 EOF
 
@@ -87,8 +85,13 @@ autocmd BufWritePre *.js Neoformat
 " Give more space for displaying messages.
 set cmdheight=2
 
+set termguicolors
+
 set colorcolumn=120
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+highlight ColorColumn ctermbg=0 guibg=#3f3f3f
+highlight LspDiagnosticsDefaultError guifg=#e74c3c
+highlight LspDiagnosticsDefaultWarning guifg=#f39c12
+highlight LspDiagnosticsDefaultInformation guifg=#16a085
 
 " Fix for backspace which was not working as expected.
 set backspace=indent,eol,start
