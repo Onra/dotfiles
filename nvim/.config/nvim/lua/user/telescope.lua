@@ -11,6 +11,7 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
+    file_ignore_patterns = {".git"},
 
     mappings = {
       i = {
@@ -78,6 +79,9 @@ telescope.setup {
     },
   },
   pickers = {
+    find_files = {
+      hidden = true
+    }
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
