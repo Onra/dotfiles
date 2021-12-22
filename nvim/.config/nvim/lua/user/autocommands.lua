@@ -6,6 +6,7 @@ vim.cmd [[
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
     autocmd BufWritePre *.js Neoformat
+    autocmd BufWritePre *.rs Neoformat
   augroup end
 
   augroup _git
