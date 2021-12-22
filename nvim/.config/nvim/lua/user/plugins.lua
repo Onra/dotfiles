@@ -101,6 +101,9 @@ return packer.startup(function(use)
   use "RishabhRD/popfix"
   use "RishabhRD/nvim-cheat.sh"
 
+  -- vim surround
+  use "tpope/vim-surround"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

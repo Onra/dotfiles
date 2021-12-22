@@ -249,6 +249,11 @@ _G.packer_plugins = {
     path = "/Users/onra/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/onra/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/onra/.local/share/nvim/site/pack/packer/start/which-key.nvim",
