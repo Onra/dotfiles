@@ -10,4 +10,19 @@ return require('packer').startup(function()
 
 	-- git
 	use 'TimUntersberger/neogit'
+
+	use('nvim-treesitter/nvim-treesitter', {
+     	   run = ':TSUpdate'
+    	})
+
+	-- navigation
+	use 'nvim-telescope/telescope.nvim'
+
+	-- statusline
+	use {
+	  'nvim-lualine/lualine.nvim',
+	  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
+
+	use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
 end)
