@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
 	-- packer can manage itself
 	use 'wbthomason/packer.nvim'
 
@@ -12,8 +12,8 @@ return require('packer').startup(function()
 	use 'TimUntersberger/neogit'
 
 	use('nvim-treesitter/nvim-treesitter', {
-     	   run = ':TSUpdate'
-    	})
+       run = ':TSUpdate'
+    })
 
 	-- navigation
 	use 'nvim-telescope/telescope.nvim'
@@ -25,4 +25,16 @@ return require('packer').startup(function()
 	}
 
 	use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+
+    use {
+      'kyazdani42/nvim-tree.lua',
+      requires = {
+        'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+
 end)
