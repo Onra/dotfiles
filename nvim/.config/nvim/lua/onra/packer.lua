@@ -8,6 +8,9 @@ return require('packer').startup(function(use)
 	-- styling
 	use 'gruvbox-community/gruvbox'
 
+    -- formatting
+    use 'tpope/vim-surround'
+
 	-- git
 	use 'TimUntersberger/neogit'
 
