@@ -7,6 +7,7 @@ return require('packer').startup(function(use)
 
 	-- styling
 	use 'gruvbox-community/gruvbox'
+    use 'folke/tokyonight.nvim'
 
     -- formatting
     use 'tpope/vim-surround'
