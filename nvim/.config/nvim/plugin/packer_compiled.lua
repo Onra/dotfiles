@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/christ/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/Users/christ/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/christ/.local/share/nvim/site/pack/packer/start/gruvbox",
