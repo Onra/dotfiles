@@ -19,4 +19,4 @@ vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { noremap = false })
 vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = false })
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = false })
 
-vim.api.nvim_set_keymap('n', '<C-n>', '<cmd>NvimTreeToggle<CR>', { noremap = false })
+vim.api.nvim_set_keymap('n', '<C-n>', '<cmd>NvimTreeFindFileToggle<CR>', { noremap = false })
