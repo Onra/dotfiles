@@ -92,6 +92,7 @@ prompt pure
 alias godev="cd ~/dev/"
 alias tmux="TERM=xterm-256color tmux"
 alias dotf="cd ~/.dotfiles"
+alias vim="nvim"
 
 export DEFAULT_USER="$(whoami)"
 
