@@ -39,4 +39,6 @@ return require('packer').startup(function(use) -- packer can manage itself
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
+    use 'ThePrimeagen/harpoon'
+
 end)

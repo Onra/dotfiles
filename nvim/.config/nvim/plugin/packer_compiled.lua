@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/christ/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
+  harpoon = {
+    loaded = true,
+    path = "/Users/christ/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/christ/.local/share/nvim/site/pack/packer/start/lualine.nvim",
