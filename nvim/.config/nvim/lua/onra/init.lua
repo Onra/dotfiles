@@ -1,4 +1,4 @@
 require('onra.packer')
-require('onra.colors')
+require('onra.remap')
 require('onra.statusline')
 require('onra.set')

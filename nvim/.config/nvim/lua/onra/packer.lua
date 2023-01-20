@@ -1,5 +1,4 @@
-return require('packer').startup(function(use)
-	-- packer can manage itself
+return require('packer').startup(function(use) -- packer can manage itself
 	use 'wbthomason/packer.nvim'
 
 	-- nvim helper functions by tjdevries
@@ -20,18 +19,17 @@ return require('packer').startup(function(use)
     })
 
 	-- navigation
-	use 'nvim-telescope/telescope.nvim'
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+}
 
 	-- statusline
 	use {
 	  'nvim-lualine/lualine.nvim',
 	  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
-
-	use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
 
     use {
       'kyazdani42/nvim-tree.lua',
@@ -40,7 +38,5 @@ return require('packer').startup(function(use)
       },
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-
-    use {'neoclide/coc.nvim', branch = 'release'}
 
 end)

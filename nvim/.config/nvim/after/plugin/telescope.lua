@@ -1,7 +1,8 @@
-vim.api.nvim_set_keymap('n', '<leader>p', '<cmd>Telescope<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files hidden=true<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fb', '<cmd>Telescope file_browser<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>fm', '<cmd>Telescope man_pages sections=ALL<CR>', { noremap = true })
+local builtin = require('telescope.builtin')
+
+vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fm', builtin.man_pages, {})
 
