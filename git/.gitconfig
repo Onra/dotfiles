@@ -7,3 +7,5 @@
 	ss = status
 [core]
 	autocrlf = input
+[init]
+	defaultBranch = main
