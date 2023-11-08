@@ -98,3 +98,10 @@ export DEFAULT_USER="$(whoami)"
 
 # Activate zsh-syntax-highlighting
 # source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# bun completions
+[ -s "/Users/christ/.bun/_bun" ] && source "/Users/christ/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
