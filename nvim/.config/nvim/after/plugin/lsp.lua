@@ -19,6 +19,13 @@ lsp.configure('sumneko_lua', {
     }
 })
 
+lsp.format_on_save({
+  servers = {
+    ['lua_ls'] = {'lua'},
+    ['rust_analyzer'] = {'rust'},
+  }
+})
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
