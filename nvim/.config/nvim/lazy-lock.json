@@ -3,9 +3,8 @@
   "fzf": { "branch": "master", "commit": "3c40b1bd51a895a907dbae5d30f6d9e99bdc1f90" },
   "fzf-lua": { "branch": "main", "commit": "fc0f2b5781587d388b743c2c114127a7036d1a31" },
   "lazy.nvim": { "branch": "main", "commit": "cf8ecc2c5e4332760431a33534240b0cbc6680ab" },
-  "mini.pick": { "branch": "main", "commit": "b7ee06ca0b692023d87a17ba855012047c6bec6f" },
   "neogit": { "branch": "master", "commit": "5e51097f964c01bc457f3a0f6fb7287d6782c04e" },
   "nvim-web-devicons": { "branch": "master", "commit": "19d257cf889f79f4022163c3fbb5e08639077bd8" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
-  "telescope.nvim": { "branch": "master", "commit": "df534c3042572fb958586facd02841e10186707c" }
+  "tokyonight.nvim": { "branch": "main", "commit": "19f39b53ef5e148bf94ea3696df36175af7e31e6" }
 }
